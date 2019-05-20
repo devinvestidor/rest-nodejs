@@ -37,7 +37,7 @@ router.get('/', (req, res) => res.status(200).send({ pessoas }));
 
 // Rota buscar por id
 router.get('/:id', (req, res) => {
-    const pessoa = pessoas.filter(pessoa => pessoa.id == req.params.id);
+    const pessoa = pessoas.find(pessoa => pessoa.id == req.params.id);
 
     return res.status(200).send({ pessoa });
 });
